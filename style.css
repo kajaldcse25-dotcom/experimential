@@ -30,7 +30,7 @@ ul li {
     transition: all 0.2s ease;
 }
 
-/* When user clicks (fake drag effect) */
+
 ul li:active {
     cursor: grabbing;
     transform: scale(1.1) rotate(-2deg);
