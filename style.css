@@ -55,7 +55,7 @@ select {
     transition: 0.3s;
 }
 
-/* Fake drop zone highlight */
+
 select:hover {
     border-color: #4CAF50;
     background-color: #eaffea;
