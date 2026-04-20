@@ -9,6 +9,8 @@ body {
 h2, h3, p {
     text-align: center;
 }
+}
+
 ul {
     list-style: none;
     padding: 0;
