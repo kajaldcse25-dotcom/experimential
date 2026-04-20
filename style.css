@@ -43,7 +43,7 @@ ul li:hover {
     transform: translateY(-3px);
 }
 
-/* Beaker (select dropdown styling) */
+
 select {
     display: block;
     margin: 10px auto;
