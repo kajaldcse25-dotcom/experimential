@@ -1,0 +1,88 @@
+/* Page styling */
+body {
+    background: linear-gradient(to right, #e6e6fa, #d0f0ff);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Center headings & text */
+h2, h3, p {
+    text-align: center;
+}
+
+/* Chemical list layout */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Draggable feel items */
+ul li {
+    background: #f8d7da;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: grab;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.2s ease;
+}
+
+/* When user clicks (fake drag effect) */
+ul li:active {
+    cursor: grabbing;
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* Hover effect */
+ul li:hover {
+    background: #f5c6cb;
+    transform: translateY(-3px);
+}
+
+/* Beaker (select dropdown styling) */
+select {
+    display: block;
+    margin: 10px auto;
+    padding: 6px;
+    width: 160px;
+    border-radius: 6px;
+    border: 2px dashed #888;
+    background-color: #fafafa;
+    transition: 0.3s;
+}
+
+/* Fake drop zone highlight */
+select:hover {
+    border-color: #4CAF50;
+    background-color: #eaffea;
+}
+
+/* Table styling */
+table {
+    margin: 30px auto;
+    border-collapse: collapse;
+    width: 75%;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #444;
+    text-align: center;
+}
+
+th {
+    background: #4CAF50;
+    color: white;
+}
+
+/* Section spacing */
+hr {
+    margin: 25px 0;
+}
