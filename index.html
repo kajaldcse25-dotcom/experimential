@@ -86,5 +86,33 @@
 </table>
 
 <hr>
+<script>
+let selectedChemical = "";
+
+function dragStart(event) {
+    selectedChemical = event.target.innerText;
+}
+
+function allowDrop(event) {
+    event.preventDefault();
+}
+
+function drop(event) {
+    event.preventDefault();
+
+    let beakerText = event.target.innerText;
+    event.target.innerText = selectedChemical;
+
+    if (beakerText.includes("Beaker 1")) {
+        document.getElementById("chem1").innerText = selectedChemical;
+    }
+    else if (beakerText.includes("Beaker 2")) {
+        document.getElementById("chem2").innerText = selectedChemical;
+    }
+    else if (beakerText.includes("Beaker 3")) {
+        document.getElementById("chem3").innerText = selectedChemical;
+    }
+}
+</script>
 </body>
 </html>
