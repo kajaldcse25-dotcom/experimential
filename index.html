@@ -1,129 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>chemistry lab</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>Chemistry lab</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body class="container text-center mt-4">
+<body>
 
-<h2>SCIENCE SIMULATION: VIRTUAL CHEMISTRY LAB</h2>
 
-<p>Select a chemical and assign it to a beaker</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand">VIRTUAL CHEMISTRY LAB</a>
 
-<hr>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
 
-<h3>virtual Chemistry lab</h3>
-
-<ul class="list-unstyled d-flex justify-content-center gap-3">
-  <li>Acid (HCl)</li>
-  <li>Base (NaOH)</li>
-  <li>Water (H2O)</li>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#lab">Lab1</a></li>
+<li class="nav-item"><a class="nav-link" href="#periodic">Lab2</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 </ul>
+</div>
+</div>
+</nav>
 
 
-<h3>Drag Chemicals</h3>
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
 
-<div class="btn btn-primary m-2" draggable="true" ondragstart="dragStart(event)">Acid (HCl)</div>
+<div class="carousel-item active">
+<img src="https://www.thoughtco.com/thmb/FM9989Rljqs_-viDkaznsFkYb2s=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-545286316-433dd345105e4c6ebe4cdd8d2317fdaa.jpg" class="d-block w-100" height="400">
+</div>
+
+<div class="carousel-item">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCnhLbAqfDdBpfMa2FW-eI9V8dcAhp_p4h1g&s" class="d-block w-100" height="400">
+</div>
+
+<div class="carousel-item">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrSxCW7DiD3TJ1RuQTMn7RNTk7HcuxCFQ_8g&s" class="d-block w-100" height="400">
+</div>
+
+</div>
+
+<button class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+</div>
+
+
+<div class="container mt-5 text-center">
+<h2>Features</h2>
+
+<div class="row mt-4">
+<div class="col-md-4">
+<div class="card p-3 custom-card">
+<h5>Interactive Lab</h5>
+<p>Drag and drop chemicals to simulate reactions.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card p-3 custom-card">
+<h5>Safe Experiments</h5>
+<p>No real danger — everything virtual.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card p-3 custom-card">
+<h5>Real Time Results</h5>
+<p>Instant observation and output.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="container mt-5" id="lab">
+<h2 class="text-center">Virtual Chemistry Lab</h2>
+
+<div class="text-center mt-3">
+<div class="btn btn-danger m-2" draggable="true" ondragstart="dragStart(event)">Acid (HCl)</div>
 <div class="btn btn-success m-2" draggable="true" ondragstart="dragStart(event)">Base (NaOH)</div>
 <div class="btn btn-info m-2" draggable="true" ondragstart="dragStart(event)">Water (H2O)</div>
-
-<hr>
-
-<h3>Beakers</h3>
-
-<div class="border p-3 m-2">
-    <b>Beaker 1</b>
-    <div id="b1" class="border mt-2 p-2" ondrop="drop(event)" ondragover="allowDrop(event)">Drop Here</div>
 </div>
 
-<div class="border p-3 m-2">
-    <b>Beaker 2</b>
-    <div id="b2" class="border mt-2 p-2" ondrop="drop(event)" ondragover="allowDrop(event)">Drop Here</div>
+<div class="row mt-4 text-center">
+<div class="col-md-4">
+<h5>Beaker 1</h5>
+<div id="b1" class="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)">Drop Here</div>
 </div>
 
-<div class="border p-3 m-2">
-    <b>Beaker 3</b>
-    <div id="b3" class="border mt-2 p-2" ondrop="drop(event)" ondragover="allowDrop(event)">Drop Here</div>
+<div class="col-md-4">
+<h5>Beaker 2</h5>
+<div id="b2" class="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)">Drop Here</div>
 </div>
 
-<hr>
+<div class="col-md-4">
+<h5>Beaker 3</h5>
+<div id="b3" class="drop-box" ondrop="drop(event)" ondragover="allowDrop(event)">Drop Here</div>
+</div>
+</div>
 
-<h3>Observation Table</h3>
 
-<table class="table table-bordered">
+<table class="table table-dark table-bordered mt-4 text-center">
 <tr>
-    <th>Beaker No.</th>
-    <th>Chemical Added</th>
-    <th>Observation</th>
+<th>Beaker</th>
+<th>Chemical</th>
+<th>Observation</th>
 </tr>
 
-<tr>
-    <td>1</td>
-    <td id="chem1">__________</td>
-    <td id="obs1">__________</td>
-</tr>
-
-<tr>
-    <td>2</td>
-    <td id="chem2">__________</td>
-    <td id="obs2">__________</td>
-</tr>
-
-<tr>
-    <td>3</td>
-    <td id="chem3">__________</td>
-    <td id="obs3">__________</td>
-</tr>
-
+<tr><td>1</td><td id="chem1"></td><td id="obs1"></td></tr>
+<tr><td>2</td><td id="chem2"></td><td id="obs2"></td></tr>
+<tr><td>3</td><td id="chem3"></td><td id="obs3"></td></tr>
 </table>
+</div>
 
+
+<div class="container mt-5" id="periodic">
+<h2 class="text-center">Periodic Table Lab</h2>
+<p class="text-center">Click an element to learn basic properties</p>
+
+<div class="row text-center g-2">
+
+<div class="col-3 col-md-1">
+<div class="pt-box" onclick="showElement('H','Hydrogen')">H</div>
+</div>
+
+<div class="col-3 col-md-1">
+<div class="pt-box" onclick="showElement('He','Helium')">He</div>
+</div>
+
+<div class="col-3 col-md-1">
+<div class="pt-box" onclick="showElement('Na','Sodium')">Na</div>
+</div>
+
+<div class="col-3 col-md-1">
+<div class="pt-box" onclick="showElement('Cl','Chlorine')">Cl</div>
+</div>
+
+<div class="col-3 col-md-1">
+<div class="pt-box" onclick="showElement('O','Oxygen')">O</div>
+</div>
+
+</div>
+
+<div class="mt-4 text-center">
+<h5 id="elName">Select an element</h5>
+<p id="elInfo"></p>
+</div>
+</div>
+<div class="container mt-5" id="about">
+<h2 class="text-center">About Us</h2>
+<p class="text-center">
+ChemLab is a virtual chemistry lab platform designed for students to perform experiments safely and interactively.
+</p>
+</div>
+
+
+<div class="container mt-5" id="contact">
+<h2 class="text-center">sign in</h2>
+
+<form class="mt-3">
+<input type="text" class="form-control mb-2" placeholder="Name">
+<input type="email" class="form-control mb-2" placeholder="Email">
+<textarea class="form-control mb-2" placeholder="Message"></textarea>
+<button class="btn btn-primary w-100">Send</button>
+</form>
+<h2 class="text-center">contact us</h2>
+<p class="text-center">Email: kajald.cse25@sbjit.edu.in</p>
+<p class="text-center">Phone: +91 1234567890</p>
+</div>
+
+
+<footer>
+<p>virtual chemistry lab | Made by Kajal dhakate </p>
+</footer>
 
 <script>
-let selectedChemical = "";
+let selectedChemical="";
 
-function dragStart(event) {
-    selectedChemical = event.target.innerText;
+function dragStart(e){
+selectedChemical=e.target.innerText;
 }
 
-function allowDrop(event) {
-    event.preventDefault();
+function allowDrop(e){
+e.preventDefault();
 }
 
-function drop(event) {
-    event.preventDefault();
+function drop(e){
+e.preventDefault();
+let target=e.target;
+target.innerText=selectedChemical;
 
-    let target = event.target;
-    target.innerText = selectedChemical;
+let obs="";
+if(selectedChemical.includes("Acid")) obs="Acidic";
+else if(selectedChemical.includes("Base")) obs="Basic";
+else obs="Neutral";
 
-    let observation = "";
+if(target.id==="b1"){chem1.innerText=selectedChemical;obs1.innerText=obs;}
+if(target.id==="b2"){chem2.innerText=selectedChemical;obs2.innerText=obs;}
+if(target.id==="b3"){chem3.innerText=selectedChemical;obs3.innerText=obs;}
+}
+function showElement(symbol,name){
+  let info="";
 
-    if (selectedChemical.includes("Acid")) {
-        observation = "Acidic nature";
-    } else if (selectedChemical.includes("Base")) {
-        observation = "Basic nature";
-    } else {
-        observation = "Neutral substance";
-    }
+  if(symbol==="H") info="Hydrogen - Lightest element, used in fuel";
+  if(symbol==="He") info="Helium - Noble gas, used in balloons";
+  if(symbol==="Na") info="Sodium - Reactive metal, found in salt";
+  if(symbol==="Cl") info="Chlorine - Used in disinfectants";
+  if(symbol==="O") info="Oxygen - Essential for breathing";
 
-    if (target.id === "b1") {
-        document.getElementById("chem1").innerText = selectedChemical;
-        document.getElementById("obs1").innerText = observation;
-    }
-    else if (target.id === "b2") {
-        document.getElementById("chem2").innerText = selectedChemical;
-        document.getElementById("obs2").innerText = observation;
-    }
-    else if (target.id === "b3") {
-        document.getElementById("chem3").innerText = selectedChemical;
-        document.getElementById("obs3").innerText = observation;
-    }
+  document.getElementById("elName").innerText=name+" ("+symbol+")";
+  document.getElementById("elInfo").innerText=info;
 }
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
